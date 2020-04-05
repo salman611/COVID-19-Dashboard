@@ -1,0 +1,2 @@
+class PharmciesStore < ApplicationRecord
+end

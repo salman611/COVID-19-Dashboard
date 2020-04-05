@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pharmcies Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pharmcies_stores.each do |pharmcies_store| %>
+      <tr>
+        <td><%= pharmcies_store.name %></td>
+        <td><%= pharmcies_store.latitude %></td>
+        <td><%= pharmcies_store.longitude %></td>
+        <td><%= link_to 'Show', pharmcies_store %></td>
+        <td><%= link_to 'Edit', edit_pharmcies_store_path(pharmcies_store) %></td>
+        <td><%= link_to 'Destroy', pharmcies_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pharmcies Store', new_pharmcies_store_path %>
