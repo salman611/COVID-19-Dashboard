@@ -1,0 +1,49 @@
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="/">COVID-19</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to('Overview', pages_about_path, class: 'nav-item nav-link active') %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to('Prevention', pages_prevention_path, class: 'nav-item nav-link active') %>
+      </li>
+      
+      <li class="nav-item active">
+        <%= link_to('Statistics', statistics_path, class: 'nav-item nav-link active') %>
+      </li>
+      <li class="nav-item active">
+      <%= link_to('Hospitals', hospitals_path, class: 'nav-item nav-link active') %>
+    </li>
+    <li class="nav-item active">
+    <%= link_to('Pharmacies & stores', stores_path, class: 'nav-item nav-link active') %>
+  </li>
+  <% if admin_signed_in? %>
+  <li><%= link_to 'Sign Out', destroy_admin_session_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to 'Sign In', new_admin_session_path, method: :get %></li>
+<% end %>
+<% if admin_signed_in? %>
+  <li>
+  <%= link_to('Edit Profile', edit_admin_registration_path) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Sign Up', new_admin_registration_path) %>
+  </li>
+<% end %>
+
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">   
+    <div class="input-group-btn"> 
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+

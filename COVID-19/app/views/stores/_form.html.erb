@@ -6,15 +6,13 @@
   </script>
 <% end %>
 
-
-
-<%= form_with(model: hospital, local: true) do |form| %>
-  <% if hospital.errors.any? %>
+<%= form_with(model: store, local: true) do |form| %>
+  <% if store.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(hospital.errors.count, "error") %> prohibited this hospital from being saved:</h2>
+      <h2><%= pluralize(store.errors.count, "error") %> prohibited this store from being saved:</h2>
 
       <ul>
-      <% hospital.errors.full_messages.each do |message| %>
+      <% store.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -36,9 +34,10 @@
     <%= form.text_field :longitude %>
   </div>
 
+
   <p>
   <div id="map2"></div>
-</p>
+</p>    
 
   <div class="actions">
     <%= form.submit %>

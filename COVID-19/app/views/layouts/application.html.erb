@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head >
     <title>COVID19</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAt3see8aRUtfECq6HoJHLjPm_q75XZSpU'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield(:head_tags) %>
   </head>
 
   <body>
-    <%= yield %>
+
+  <% if admin_signed_in? %>
+  <p>
+    Welcome <%= current_admin.email %>
+  </p>
+  <%end%>
+  <%= render 'layouts/nav' %>
+  <%= yield %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
   </body>
 </html>
