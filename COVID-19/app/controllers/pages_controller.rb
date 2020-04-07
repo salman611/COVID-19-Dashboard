@@ -1,6 +1,8 @@
 
 class PagesController < ApplicationController
   def home
+  #  @img= image_tag("./Stop-Covid19-scaled.jpg")
+
   end
 
   def about
@@ -44,15 +46,6 @@ class PagesController < ApplicationController
 
   def prevention
 
-  end
-
-  def search  
-    if params[:search].blank?  
-      redirect_to(root_path, alert: "Empty field!") and return  
-    else  
-      @parameter = params[:search].downcase  
-      @results = Store.all.where("lower(name) LIKE :search", search: @parameter)  
-    end  
   end
 
 end

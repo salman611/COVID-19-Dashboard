@@ -14,7 +14,7 @@
   <strong>Name:</strong>
   <%= @hospital.name %>
 </p>
-
+<% if admin_signed_in? %>
 <p>
   <strong>Latitude:</strong>
   <%= @hospital.latitude %>
@@ -24,7 +24,7 @@
   <strong>Longitude:</strong>
   <%= @hospital.longitude %>
 </p>
-
+<% end %>
 <p>
     <div id="map"></div>
 </p>

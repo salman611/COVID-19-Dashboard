@@ -13,7 +13,7 @@
   <strong>Name:</strong>
   <%= @store.name %>
 </p>
-
+<% if admin_signed_in? %>
 <p>
   <strong>Latitude:</strong>
   <%= @store.latitude %>
@@ -23,7 +23,7 @@
   <strong>Longitude:</strong>
   <%= @store.longitude %>
 </p>
-
+<% end %>
 <p>
     <div id="map"></div>
 </p>
