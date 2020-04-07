@@ -1,14 +1,18 @@
 <h1 class="mt-4 mb-4 text-center">Statistics</h1>
 
-<%= form_tag(search_statistic_path, :method => "get",   
+    <nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"> Search for a country !</a>
+    <%= form_tag(search_statistic_path, :method => "get",   
     class: 'navbar-form navbar-left') do %>  
   <div class="input-group">  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
     <div class="input-group-btn">  
-      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </div>  
   </div>  
 <% end %> 
+</nav>
+
 
 <table class="table table-striped table-dark table-borderless table-hover text-center">
   <thead class="thead-dark">
@@ -45,11 +49,6 @@
       
       </tr>
       <% end %>
-
-
-
-
-
    
   </tbody>
 </table>

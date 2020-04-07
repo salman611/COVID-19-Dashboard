@@ -4,8 +4,7 @@ class StatisticsController < ApplicationController
    
     def index
     @cases= HTTParty.get('https://api.covid19api.com/summary')
-    if params[:search_bar]
-   
+
       end
 
     # def show
@@ -16,7 +15,7 @@ class StatisticsController < ApplicationController
 
     def search
       if params[:search].blank?  
-        redirect_to(search_statisitcs_path, alert: "Please fill a country!") and return  
+        redirect_to(search_statistic_path, alert: "Please fill a country!") and return  
       else  
         params[:search] = params[:search].downcase 
       end
@@ -26,6 +25,6 @@ class StatisticsController < ApplicationController
     end
    
   end
-end
+
 
 
