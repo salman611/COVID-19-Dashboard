@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :stores
   resources :hospitals
+  get 'statistics/search' => 'statistics#search', :as => 'search_statistic'
   resources :statistics
   get 'pages/home'
   get 'pages/about'
@@ -10,7 +11,5 @@ Rails.application.routes.draw do
   get "bootstrap", to: "pages#bootstrap"
   get "bootstrap", to: "stores#bootstrap"
   get "bootstrap", to: "hospitals#bootstrap"
-
-  get '/search' => 'pages#search', :as => 'search_page'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,24 +1,32 @@
+<% provide :head_tags do %>
+  <% end %>
 <p id="notice"><%= notice %></p>
 
 <h1 class="mt-4 mb-4 text-center">Hospitals</h1>
 
+
 <div>
 <% @hospitals.each do |hospital| %>
 
-
-<div class="card-group">
+  <div class="card-columns">
   <div class="card">
-    <img class="card-img-top" src="" alt="Card image cap">
     <div class="card-body">
+
       <h5 class="card-title"><td><%= hospital.name %></td></h5>
       <td><%= link_to 'Show', hospital %></td>
+      <% if admin_signed_in? %>
       <td><%= link_to 'Edit', edit_hospital_path(hospital) %></td>
       <td><%= link_to 'Destroy', hospital, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
     </div>
   </div>
 
 </div>
+
+
 <% end %>
 </div>
-
+<% if admin_signed_in? %>
 <%= link_to 'New Hospital', new_hospital_path %>
+<% end %>
+

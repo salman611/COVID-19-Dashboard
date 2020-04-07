@@ -1,5 +1,5 @@
 class HospitalsController < ApplicationController
-  before_action :authenticate_admin!, except: [:show, :index]
+  before_action :authenticate_admin!, :except => [:show, :index]
   before_action :set_hospital, only: [:show, :edit, :update, :destroy]
   
 
@@ -21,6 +21,8 @@ class HospitalsController < ApplicationController
 
   # GET /hospitals/1/edit
   def edit
+
+    
   end
 
   # POST /hospitals

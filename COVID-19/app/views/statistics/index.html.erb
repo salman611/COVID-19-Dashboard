@@ -1,6 +1,14 @@
-
 <h1 class="mt-4 mb-4 text-center">Statistics</h1>
 
+<%= form_tag(search_statistic_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    <div class="input-group-btn">  
+      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+  </div>  
+<% end %> 
 
 <table class="table table-striped table-dark table-borderless table-hover text-center">
   <thead class="thead-dark">
@@ -15,9 +23,9 @@
   </tr>
 </thead>
 <tbody>
-
 <tr>
-        <td><%= "WorldWide" %></td>
+
+        <td><%= link_to "WorldWide", statistics_path(@cases["Global"]) %></td>
         <td><%= @cases["Global"]["NewConfirmed"] %></td>
         <td><%= @cases["Global"]["TotalConfirmed"] %></td>
         <td><%= @cases["Global"]["NewDeaths"] %></td>
@@ -25,9 +33,9 @@
         <td><%= @cases["Global"]["NewRecovered"] %></td>
         <td><%= @cases["Global"]["TotalRecovered"] %></td>
         </tr>
-        <tr>
-        <% @cases['Countries'].each do |country| %>
-        <td><%= country["Country"] %></td>
+      
+        <% @cases['Countries'].each_with_index do |country,index| %> 
+        <td><%= link_to country["Country"], statistics_path(country["CountryCode"]) %></td>
         <td><%= country["NewConfirmed"] %></td>
         <td><%= country["TotalConfirmed"] %></td>
         <td><%= country["NewDeaths"] %></td>
