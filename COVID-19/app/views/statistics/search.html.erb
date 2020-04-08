@@ -1,4 +1,4 @@
-<h3>Country Overview</h3>  
+<h1 class="mt-4 mb-4 text-center"> Coronavirus Cases in <%=params[:search].capitalize()%> </h1>  
 
     <table class="table table-striped table-dark table-borderless table-hover text-center">
     <thead class="thead-dark">
@@ -18,7 +18,7 @@
   <tr>
   
   <td><%= @search["country"] %></td>
-  <td><%= @search["flag"] %></td>
+  <td><%= image_tag(@search["countryInfo"]["flag"], height:"30", width:"60")%></td>
   <td><%= @search["cases"] %></td>
   <td><%= @search["todayCases"] %></td>
   <td><%= @search["deaths"] %></td>
