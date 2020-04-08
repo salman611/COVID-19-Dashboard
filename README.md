@@ -9,6 +9,19 @@
 The project about a dashboard for COVID-19 where a user can learn more about the disease's statistics, symptoms , near by stores sell sanitizers, and proper hospitals
 where a user can make an appointment for testing.
 
+## Technologies used
+- Ruby on Rails 
+- JS
+- Visual Studio Code 
+- Browser Tools 
+- Bootstrap
+- Heroku
+- Github
+- Third party API
+- Google map
+
+
+
 
 ## Wireframes
 
@@ -24,28 +37,39 @@ where a user can make an appointment for testing.
 ## User Stories
 ### VERSION 1.0
 #### User Model
-- As a new user,  I can sign up 
-- As a user, I can sign in 
+
 - As a user, I can see the feeds (statistics, info, advice) about COVID-19 
 - As a user, I can see the Pharmacies that sell sanitizers, masks, and gloves near me 
 - As a user, I can see hospitals accept COVID-19 patients near me 
-- As a user, I can make an appointment to make a test for COVID-19 
-- As a user, I can see info about the hospitals ( test price, accept insurance)
 
-#### Gust Model:
-- As a gust, I can see feeds about COVID-19 
+
 
 #### Admin Model:
+- As an adnin, I can sign up
+- As an adnin, I can sign in
 - As an admin, I can add feeds 
+- As an admin, I can edit feeds 
+- As an admin, I can delete feeds 
+- As an admin, I can add new a hospital 
+- As an admin, I can add edit a hospital  
+- As an admin, I can add delete a hospital 
+- As an admin, I can add new a store 
+- As an admin, I can add edit a store 
+- As an admin, I can add delete a hospital
+- As a admin, I can see the feeds (statistics, info, advice) about COVID-19 
+- As a admin, I can see the Pharmacies that sell sanitizers, masks, and gloves near me 
+- As a admin, I can see hospitals accept COVID-19 patients near me 
 
 
 
-### VERSION 2.0
+### VERSION 2.0 (Have not started it)
 #### User Model:
 
 - As a user, I can add my health status of COVID-19 ( negative, positive or suspected) 
 - As a user, I can see if someone is positive or suspected for COVID-19 near me  
 - As a user, I can notify if someone is positive or suspected for COVID-19 near me   
+- As a user, I can make an appointment to make a test for COVID-19 
+- As a user, I can see info about the hospitals ( test price, accept insurance)
 
 #### Admin Model:
 - As an admin, I can track the movement of quarantined people 
