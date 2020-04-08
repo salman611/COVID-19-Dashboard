@@ -3,27 +3,30 @@
 <h1 class="mt-4 mb-4 text-center">Pharmacies & Stores </h1>
 
 
-<div>
-<% @stores.each do |store| %>
-
-  <div class="card-columns">
-  <div class="card">
-    <div class="card-body">
-
-      <h5 class="card-title"><td><%= store.name %></td></h5>
-      <td><%= link_to 'Show', store %></td>
-      <% if admin_signed_in? %>
-      <td><%= link_to 'Edit', edit_store_path(store) %></td>
-      <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </div>
-  </div>
-
-</div>
-
-
-<% end %>
-</div>
 <% if admin_signed_in? %>
 <%= link_to 'New Store', new_store_path %>
 <% end %>
+<div class= "container">
+<div class= "row">
+<% @stores.each do |store| %>
+<div class="col-2-lg ml-3">
+  <div class="card" style= "width: 18rem; width: 20rem;" >
+  <img class="card-img-top"  src="<%= store.img %>"  alt= "nothing"/>
+  <div class="card-body">    
+  <h5 class="card-title"><td><%= store.name %></td></h5>
+  <td><%= link_to 'Show', store %></td>
+  <% if admin_signed_in? %>
+  <td><%= link_to 'Edit', edit_store_path(store) %></td>
+  <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+
+  </div>
+
+  </div>
+</div>
+<% end %>
+</div>
+</div>
+
+ 
+

@@ -11,7 +11,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Hospital Name:</strong>
   <%= @hospital.name %>
 </p>
 <% if admin_signed_in? %>
@@ -28,9 +28,11 @@
 <p>
     <div id="map"></div>
 </p>
-
-<%= link_to 'Edit', edit_hospital_path(@hospital) %> |
 <%= link_to 'Back', hospitals_path %>
+<% if admin_signed_in? %>
+<%= link_to 'Edit', edit_hospital_path(@hospital) %> |
+<% end %>
+
 
 
 

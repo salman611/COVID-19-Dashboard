@@ -3,12 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#map {
-    width: 600px;
-    height: 400px;
+.container{
+
+display:flex;
+justify-content: center;
+align-items: center;
+
+}
+.card:hover {
+    background-color: lightcyan;
+    box-shadow: -1px 9px 40px -12px #888888;
+  
 }
 
-#map2 {
-    width: 600px;
-    height: 400px;
-}

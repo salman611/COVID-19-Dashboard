@@ -11,7 +11,7 @@
 
 
 Hospital.create!([
-{ "name": "King Fahad Medical City - KFMC", "latitude": "24.686913","longitude": "46.704106", img: "https://image.slidesharecdn.com/drsalhabibprojectsfinal-13067458221465-phpapp01-110530035857-phpapp01/95/dr-s-al-habib-projects-final-1-728.jpg?"},
+{ "name": "King Fahad Medical City - KFMC", "latitude": "24.686913","longitude": "46.704106", img:"https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2016/04/04/file-04-logo55Ar1.jpg?itok=w2CLyfH-"},
 { "name": "King Faisal Specialist Hospital & Research Centre", "latitude": "24.670964", "longitude": "46.680116", img: "https://www.kfshrc.edu.sa/store/headline/9842.png?https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2016/04/04/file-04-logo55Ar1.jpg?itok=w2CLyfH-"},
 { "name": "Dr. Sulaiman Al habib Olaya Medical Complex", "latitude": "24.705394", "longitude": "46.677456",img: "https://image.slidesharecdn.com/drsalhabibprojectsfinal-13067458221465-phpapp01-110530035857-phpapp01/95/dr-s-al-habib-projects-final-1-728.jpg?"}
 ])
@@ -45,9 +45,9 @@ coronavirus/2019-ncov/about/transmission.html.")
 
 Briefing.create("question": "What are the symptoms of COVID-19?", "answer": "Patients with COVID-19 have had mild to severe respiratory
 illness with symptoms of
-\n\u2022 fever.
-\n\u2022 cough.
-\n\u2022 shortness of breath.")
+\n\u2022 fever
+\n\u2022 cough
+\n\u2022 shortness of breath")
 Briefing.create("question": "What are severe complications from this virus?", "answer": "Some patients have pneumonia in both lungs, multi-organ
 failure and in some cases death.")
 Briefing.create("question": "Is there a vaccine?", "answer": "There is currently no vaccine to protect against COVID-19. The
