@@ -1,21 +1,22 @@
-<h1 class="mt-4 mb-4 text-center">Overview</h1>
+<h1 class="mt-4 mb-4 text-center">Overview About Coronavirus</h1>
 
 
 <div>
+<div class="row">
 <% @briefings.each do |briefing| %>
-  <div class="row">
+  
   <div class="col-lg-12">
 
     <div class="card-body">
-
-      <h5 class="card-title"><td><%= briefing.question %></td></h5>
-      <h5 class="card-title"><td><%= briefing.answer %></td></h5>
+      <h4 class="card-title font-italic"><strong><%= briefing.question %></strong></h4>
+      <h6 class="card-title"><%= briefing.answer %></h6>
 
     </div>
   </div>
 
-</div>
+
 
 
 <% end %>
+</div>
 </div>

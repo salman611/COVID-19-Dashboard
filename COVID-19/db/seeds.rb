@@ -44,10 +44,10 @@ of newly emerged coronaviruses at https://www.cdc.gov/
 coronavirus/2019-ncov/about/transmission.html.")
 
 Briefing.create("question": "What are the symptoms of COVID-19?", "answer": "Patients with COVID-19 have had mild to severe respiratory
-illness with symptoms of
-\n\u2022 fever
-\n\u2022 cough
-\n\u2022 shortness of breath")
+illness with symptoms of 
+\u2022 fever
+\u2022 cough
+\u2022 shortness of breath")
 Briefing.create("question": "What are severe complications from this virus?", "answer": "Some patients have pneumonia in both lungs, multi-organ
 failure and in some cases death.")
 Briefing.create("question": "Is there a vaccine?", "answer": "There is currently no vaccine to protect against COVID-19. The

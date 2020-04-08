@@ -3,16 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
+
 .container{
 
-display:flex;
-justify-content: center;
-align-items: center;
+    display:flex;
+    justify-content: center;
 
-}
-.card:hover {
-    background-color: lightcyan;
-    box-shadow: -1px 9px 40px -12px #888888;
-  
-}
-
+    }
+    
+    .card:hover {
+        background-color: lightcyan;
+        box-shadow: -1px 9px 40px -12px #888888;
+      
+    }
+    

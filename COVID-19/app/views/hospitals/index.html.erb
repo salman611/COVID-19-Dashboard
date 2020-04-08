@@ -9,9 +9,9 @@
 <div class= "container">
 <div class= "row">
 <% @hospitals.each do |hospital| %>
-<div class="col-4-lg ml-3">
-  <div class="card" style= "width: 18rem; height: 18rem">
-  <img class="card-img-top"  src="<%= hospital.img %>"  alt= "nothing"/>
+  <div class="col-4-lg ml-3" >
+  <div class="card text-center" style= "width: 18rem; height: 20rem;">
+  <img class="card-img-top"  src="<%= hospital.img %>"  alt= "nothing" width="286" height="170">
   <div class="card-body">    
   <h5 class="card-title"><td><%= hospital.name %></td></h5>
   <td><%= link_to 'Show', hospital %></td>
@@ -27,5 +27,6 @@
 <% end %>
 </div>
 </div>
+
 
 
